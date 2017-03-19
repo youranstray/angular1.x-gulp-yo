@@ -1,0 +1,5 @@
+[core]
+    attributesfile = ~/.gitattributes
+[merge "pofile"]
+    name = custom merge driver for gettext po files
+    driver = git-po-merge %A %O %B

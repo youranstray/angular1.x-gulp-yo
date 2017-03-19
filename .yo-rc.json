@@ -1,0 +1,65 @@
+{
+  "generator-moda": {
+    "testSuffix": ".spec",
+    "testPassOnDefault": true,
+    "alwaysSkipDialog": false,
+    "stylePrefix": "_",
+    "editorCommand": "idea",
+    "uiRouter": true,
+    "pathOutputStyle": "dasherize",
+    "routesFile": "app/scripts/routes.js",
+    "fileExt": {
+      "script": ".js",
+      "tpl": ".html",
+      "style": ".scss"
+    },
+    "dirs": {
+      "app": "app",
+      "appModules": "scripts",
+      "globalComponents": "shared",
+      "routes": "routes"
+    },
+    "subGenerators": {
+      "directive": {
+        "suffix": "Directive",
+        "globalDir": "shared/global-directives",
+        "createDirectory": true
+      },
+      "controller": {
+        "suffix": "Ctrl",
+        "nameSuffix": "Ctrl",
+        "globalDir": "",
+        "createDirectory": true
+      },
+      "service": {
+        "suffix": "Service",
+        "globalDir": "shared/global-services"
+      },
+      "factory": {
+        "suffix": "Factory",
+        "globalDir": "shared/global-services"
+      },
+      "component": {
+        "suffix": "-cp",
+        "globalDir": "shared/global-components"
+      },
+      "filter": {
+        "suffix": "Filter",
+        "globalDir": "shared/global-filters"
+      },
+      "provider": {
+        "suffix": "Provider",
+        "globalDir": "shared/global-services"
+      },
+      "decorator": {
+        "suffix": "Decorator",
+        "nameSuffix": "Decorator",
+        "globalDir": "shared/global-services"
+      },
+      "mod": {
+        "prefix": "_",
+        "createDirectory": true
+      }
+    }
+  }
+}

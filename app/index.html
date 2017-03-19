@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <!-- TODO: Rules for dynamic title? -->
+    <title>CCFE</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="description"
+          content="">
+    <meta name="keywords"
+          content="">
+
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <!-- build:css({.tmp,app}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.css" />
+    <link rel="stylesheet" href="bower_components/angularjs-datepicker/dist/angular-datepicker.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <!-- <link rel="stylesheet" href="assets/styles/main.css"/> -->
+    <!-- endbuild -->
+</head>
+
+<body ng-app="ccfeFrontend">
+
+  <!-- Main view -->
+  <main ui-view></main>
+
+  <!-- Common Footer -->
+  <!-- <ng-include src="'scripts/layout/footer/footerCtrl.html'" scope="" onload=""></ng-include> -->
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<!-- build:js({.tmp,app}) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+
+<!-- build:js({.tmp,app}) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+<script src="bower_components/angular-locker/dist/angular-locker.min.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/spin.js/spin.js"></script>
+<script src="bower_components/angular-spinner/angular-spinner.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+<script src="bower_components/at-table/dist/angular-table.js"></script>
+<script src="bower_components/clipboard/dist/clipboard.js"></script>
+<script src="bower_components/file-saver/FileSaver.js"></script>
+<script src="bower_components/karma-read-json/karma-read-json.js"></script>
+<script src="bower_components/angularjs-datepicker/dist/angular-datepicker.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/restangular/dist/restangular.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<!-- inject:js -->
+<!-- <script src="scripts/_app.js"></script>
+<script src="scripts/_config.js"></script>
+<script src="scripts/layout/footer/footerCtrl.js"></script>
+<script src="scripts/layout/header/headerCtrl.js"></script>
+<script src="scripts/layout/sidebarCtrl.js"></script>
+<script src="scripts/routes.js"></script>
+<script src="scripts/routes/admin/adminCtrl.js"></script>
+<script src="scripts/routes/admin/property/index/indexCtrl.js"></script>
+<script src="scripts/routes/admin/property/propertyService.js"></script>
+<script src="scripts/routes/admin/role/index/indexCtrl.js"></script>
+<script src="scripts/routes/admin/role/modify/modifyCtrl.js"></script>
+<script src="scripts/routes/admin/role/roleService.js"></script>
+<script src="scripts/routes/admin/user/components/add-role/add-roleDirective.js"></script>
+<script src="scripts/routes/admin/user/components/edit-role/edit-roleDirective.js"></script>
+<script src="scripts/routes/admin/user/create/createCtrl.js"></script>
+<script src="scripts/routes/admin/user/index/indexCtrl.js"></script>
+<script src="scripts/routes/admin/user/modify/modifyCtrl.js"></script>
+<script src="scripts/routes/admin/user/userService.js"></script>
+<script src="scripts/routes/customer/create/createCtrl.js"></script>
+<script src="scripts/routes/customer/customerService.js"></script>
+<script src="scripts/routes/customer/detail/customer-address-display/customer-address-display-cp.js"></script>
+<script src="scripts/routes/customer/detail/detailCtrl.js"></script>
+<script src="scripts/routes/customer/detail/detailService.js"></script>
+<script src="scripts/routes/customer/export/components/pick-column/pick-columnDirective.js"></script>
+<script src="scripts/routes/customer/export/exportCtrl.js"></script>
+<script src="scripts/routes/customer/form/address-validator/address-validatorDirective.js"></script>
+<script src="scripts/routes/customer/form/address-validator/address-validatorService.js"></script>
+<script src="scripts/routes/customer/form/crm-info/crm-infoDirective.js"></script>
+<script src="scripts/routes/customer/form/customer-form/customer-form-cp.js"></script>
+<script src="scripts/routes/customer/form/region-selector/region-selectorDirective.js"></script>
+<script src="scripts/routes/customer/form/region-selector/region-selectorService.js"></script>
+<script src="scripts/routes/customer/form/suggest-address/suggest-address-cp.js"></script>
+<script src="scripts/routes/customer/form/suggest-address/suggest-addressService.js"></script>
+<script src="scripts/routes/customer/modify/modifyCtrl.js"></script>
+<script src="scripts/routes/customer/search/searchCtrl.js"></script>
+<script src="scripts/routes/customer/search/searchService.js"></script>
+<script src="scripts/routes/dashboard/dashboardCtrl.js"></script>
+<script src="scripts/routes/dashboard/dashboardService.js"></script>
+<script src="scripts/routes/draft-order/draft-order-create/draft-order-createFactory.js"></script>
+<script src="scripts/routes/draft-order/draft-order-detail/draft-order-detailCtrl.js"></script>
+<script src="scripts/routes/draft-order/draft-order-detail/draft-order-detailService.js"></script>
+<script src="scripts/routes/draft-order/draft-order-search/searchCtrl.js"></script>
+<script src="scripts/routes/login/loginCtrl.js"></script>
+<script src="scripts/routes/order/components/belt-size/belt-adjustmentFactory.js"></script>
+<script src="scripts/routes/order/components/belt-size/belt-sizeDirective.js"></script>
+<script src="scripts/routes/order/components/belt-size/belt-sizeService.js"></script>
+<script src="scripts/routes/order/components/ccfe-in-store-cn/ccfe-in-store-cnFactory.js"></script>
+<script src="scripts/routes/order/components/check-services/check-servicesDirective.js"></script>
+<script src="scripts/routes/order/components/complimentary-card/complimentary-cardDirective.js"></script>
+<script src="scripts/routes/order/components/complimentary-card/complimentary-cardService.js"></script>
+<script src="scripts/routes/order/components/cross-selling/cross-sellingFactory.js"></script>
+<script src="scripts/routes/order/components/discount/discountDirective.js"></script>
+<script src="scripts/routes/order/components/discount/discountFactory.js"></script>
+<script src="scripts/routes/order/components/embossing/embossingDirective.js"></script>
+<script src="scripts/routes/order/components/embossing/embossingService.js"></script>
+<script src="scripts/routes/order/components/engraving/engravingDirective.js"></script>
+<script src="scripts/routes/order/components/engraving/engravingService.js"></script>
+<script src="scripts/routes/order/components/favorite-star/favorite-starDirective.js"></script>
+<script src="scripts/routes/order/components/gift-card/gift-cardDirective.js"></script>
+<script src="scripts/routes/order/components/gift-card/gift-cardService.js"></script>
+<script src="scripts/routes/order/components/gift-wrap/gift-wrapDirective.js"></script>
+<script src="scripts/routes/order/components/gift-wrap/gift-wrapService.js"></script>
+<script src="scripts/routes/order/components/order-check-product-stock/order-check-product-stockFactory.js"></script>
+<script src="scripts/routes/order/components/order-price-display/order-price-displayDirective.js"></script>
+<script src="scripts/routes/order/components/order-status-display/order-status-displayDirective.js"></script>
+<script src="scripts/routes/order/components/sms-notification/sms-notificationDirective.js"></script>
+<script src="scripts/routes/order/components/special-package/special-packageDirective.js"></script>
+<script src="scripts/routes/order/components/special-package/special-packageService.js"></script>
+<script src="scripts/routes/order/components/watch-adjustment/watch-adjustmentDirective.js"></script>
+<script src="scripts/routes/order/components/watch-adjustment/watch-adjustmentService.js"></script>
+<script src="scripts/routes/order/components/wrist-size/wrist-sizeDirective.js"></script>
+<script src="scripts/routes/order/components/wrist-size/wrist-sizeService.js"></script>
+<script src="scripts/routes/order/create/checkout-address/address-templates/checkout-address-template-cp.js"></script>
+<script src="scripts/routes/order/create/checkout-address/address-templates/checkout-address-templateService.js"></script>
+<script src="scripts/routes/order/create/checkout-address/boutique-pickup/boutique-pickup-cp.js"></script>
+<script src="scripts/routes/order/create/checkout-address/boutique-pickup/boutique-pickupService.js"></script>
+<script src="scripts/routes/order/create/checkout-address/checkout-address-paper-invoice/checkout-address-paper-invoice-cp.js"></script>
+<script src="scripts/routes/order/create/checkout-address/checkout-address-paper-invoice/checkout-address-paper-invoiceService.js"></script>
+<script src="scripts/routes/order/create/checkout-address/checkout-addressCtrl.js"></script>
+<script src="scripts/routes/order/create/checkout-address/checkout-addressService.js"></script>
+<script src="scripts/routes/order/create/checkout-address/guest-form-fields/guest-form-fields-cp.js"></script>
+<script src="scripts/routes/order/create/checkout-confirmation/checkout-confirmationCtrl.js"></script>
+<script src="scripts/routes/order/create/checkout-delivery/checkout-deliveryCtrl.js"></script>
+<script src="scripts/routes/order/create/checkout-payment/adyen-credit-card/adyen-credit-card-cp.js"></script>
+<script src="scripts/routes/order/create/checkout-payment/checkout-paymentCtrl.js"></script>
+<script src="scripts/routes/order/create/checkout-payment/credit-card/credit-card-cp.js"></script>
+<script src="scripts/routes/order/create/checkout-payment/iframe-credit-card/iframe-credit-card-cp.js"></script>
+<script src="scripts/routes/order/create/checkout-payment/payment-redirect/payment-redirectCtrl.js"></script>
+<script src="scripts/routes/order/create/components/checkout-customer-information-display/checkout-customer-information-display-cp.js"></script>
+<script src="scripts/routes/order/create/components/checkout-order-cancellation/checkout-order-cancellationDirective.js"></script>
+<script src="scripts/routes/order/create/components/order-checkout-step-overview/order-checkout-step-overview-cp.js"></script>
+<script src="scripts/routes/order/create/components/order-comment/order-commentDirective.js"></script>
+<script src="scripts/routes/order/create/components/order-summary/order-summaryDirective.js"></script>
+<script src="scripts/routes/order/create/components/search-special-product/search-special-product-cp.js"></script>
+<script src="scripts/routes/order/create/shopping-cartFactory.js"></script>
+<script src="scripts/routes/order/create/shoppingbag/shopping-bagService.js"></script>
+<script src="scripts/routes/order/create/shoppingbag/shoppingbagCtrl.js"></script>
+<script src="scripts/routes/order/detail/components/add-order-comment/add-order-commentDirective.js"></script>
+<script src="scripts/routes/order/detail/components/add-order-comment/add-order-commentService.js"></script>
+<script src="scripts/routes/order/detail/components/antifraud/antifraudDirective.js"></script>
+<script src="scripts/routes/order/detail/components/antifraud/antifraudService.js"></script>
+<script src="scripts/routes/order/detail/components/cancel-and-reorder/cancel-reorderFactory.js"></script>
+<script src="scripts/routes/order/detail/components/cancel-order/cancel-orderDirective.js"></script>
+<script src="scripts/routes/order/detail/components/cancel-order/cancel-orderService.js"></script>
+<script src="scripts/routes/order/detail/components/exchange-order/exchange-orderDirective.js"></script>
+<script src="scripts/routes/order/detail/components/exchange-order/exchange-orderService.js"></script>
+<script src="scripts/routes/order/detail/components/order-detail-delivery-method/order-detail-delivery-methodDirective.js"></script>
+<script src="scripts/routes/order/detail/components/order-detail-delivery-method/order-detail-delivery-methodService.js"></script>
+<script src="scripts/routes/order/detail/components/order-modification-email/order-modification-emailFactory.js"></script>
+<script src="scripts/routes/order/detail/components/replicate-orderFactory.js"></script>
+<script src="scripts/routes/order/detail/components/reset-order/reset-orderDirective.js"></script>
+<script src="scripts/routes/order/detail/components/reset-order/reset-orderService.js"></script>
+<script src="scripts/routes/order/detail/components/return-order/return-orderDirective.js"></script>
+<script src="scripts/routes/order/detail/components/return-order/return-orderService.js"></script>
+<script src="scripts/routes/order/detail/detailCtrl.js"></script>
+<script src="scripts/routes/order/detail/detailService.js"></script>
+<script src="scripts/routes/order/listing/listingCtrl.js"></script>
+<script src="scripts/routes/order/orderService.js"></script>
+<script src="scripts/routes/order/reservationService.js"></script>
+<script src="scripts/routes/order/search/searchCtrl.js"></script>
+<script src="scripts/routes/order/search/searchService.js"></script>
+<script src="scripts/routes/order/shared/factories/cart-request-helperFactory.js"></script>
+<script src="scripts/routes/order/shared/factories/order-session-helperFactory.js"></script>
+<script src="scripts/routes/order/shared/filters/date-time-formatFilter.js"></script>
+<script src="scripts/routes/order/shared/filters/order-currency.js"></script>
+<script src="scripts/routes/product/detail/detailCtrl.js"></script>
+<script src="scripts/routes/product/filters/img-wsadaptFilter.js"></script>
+<script src="scripts/routes/product/filters/product-imgFilter.js"></script>
+<script src="scripts/routes/product/productService.js"></script>
+<script src="scripts/routes/product/search/searchCtrl.js"></script>
+<script src="scripts/routes/product/search-widget/search-widgetDirective.js"></script>
+<script src="scripts/shared/global-components/customer-title-select/customer-title-select-cp.js"></script>
+<script src="scripts/shared/global-directives/capitalize-first.js"></script>
+<script src="scripts/shared/global-directives/continue-with-confirmation/continue-with-confirmationDirective.js"></script>
+<script src="scripts/shared/global-directives/datepicker/datepickerDirective.js"></script>
+<script src="scripts/shared/global-directives/ec-country-select/ec-country-selectDirective.js"></script>
+<script src="scripts/shared/global-directives/modal-with-confirmation/modal-with-confirmationDirective.js"></script>
+<script src="scripts/shared/global-directives/permissions/permissionsDirective.js"></script>
+<script src="scripts/shared/global-directives/product-language-select/product-language-selectDirective.js"></script>
+<script src="scripts/shared/global-directives/quick-search/quick-searchDirective.js"></script>
+<script src="scripts/shared/global-directives/results-pagination/results-paginationDirective.js"></script>
+<script src="scripts/shared/global-directives/show-if-not-empty/show-if-not-emptyDirective.js"></script>
+<script src="scripts/shared/global-directives/spinner/spinnerDirective.js"></script>
+<script src="scripts/shared/global-directives/text-area-limit/text-area-limitDirective.js"></script>
+<script src="scripts/shared/global-directives/user-context-bar/user-context-barDirective.js"></script>
+<script src="scripts/shared/global-directives/user-context-bar/user-context-barService.js"></script>
+<script src="scripts/shared/global-directives/validation-datepicker/validation-datepickerDirective.js"></script>
+<script src="scripts/shared/global-directives/validation-input/validation-inputDirective.js"></script>
+<script src="scripts/shared/global-directives/validation-radio/validation-radioDirective.js"></script>
+<script src="scripts/shared/global-filters/camel-caseFilter.js"></script>
+<script src="scripts/shared/global-filters/customer-display-nameFilter.js"></script>
+<script src="scripts/shared/global-filters/customer-name-labelFilter.js"></script>
+<script src="scripts/shared/global-filters/legacy-id-labelFilter.js"></script>
+<script src="scripts/shared/global-filters/regional-dateFilter.js"></script>
+<script src="scripts/shared/global-filters/regional-langFilter.js"></script>
+<script src="scripts/shared/global-filters/translate/anti-fraud-statusFilter.js"></script>
+<script src="scripts/shared/global-filters/translate/countryFilter.js"></script>
+<script src="scripts/shared/global-filters/translate/dynamic-translateFilter.js"></script>
+<script src="scripts/shared/global-filters/translate/languageFilter.js"></script>
+<script src="scripts/shared/global-filters/translate/order-statusFilter.js"></script>
+<script src="scripts/shared/global-filters/translate/payment-typeFilter.js"></script>
+<script src="scripts/shared/global-services/authentication/authInterceptor.js"></script>
+<script src="scripts/shared/global-services/authentication/authService.js"></script>
+<script src="scripts/shared/global-services/authentication/current-roleService.js"></script>
+<script src="scripts/shared/global-services/authentication/current-userFactory.js"></script>
+<script src="scripts/shared/global-services/config/propertiesService.js"></script>
+<script src="scripts/shared/global-services/ec-country-listFactory.js"></script>
+<script src="scripts/shared/global-services/error-interceptorFactory.js"></script>
+<script src="scripts/shared/global-services/loading-interceptorFactory.js"></script>
+<script src="scripts/shared/global-services/product-server-cacheService.js"></script>
+<script src="scripts/shared/global-services/stateChangeInterceptor.js"></script> -->
+<!-- endinject -->
+<!-- endbuild -->
+
+
+<!-- Constants scripts:
+     - i.e. Constants used: baseUrl, version & buildtime,
+     - included separately (not to be minified) for ease of substitution -->
+<!-- <script src="constants/_constants.env.js"></script> -->
+<!-- End constants -->
+
+</body>
+</html>

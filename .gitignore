@@ -1,0 +1,36 @@
+# NodeJS and Angular
+node_modules
+www
+platforms
+# release
+.tmp
+app/assets/styles/**/*.css
+app/assets/styles/**/*.css.map
+.sass-cache
+# bower_components
+# app/bower_components
+*.logdd -
+samples
+app/constants
+docs/methods/source/ccfeFrontend.controller
+docs/methods/source/ccfeFrontend.directive
+
+# Ignore IDE and Operating System artifacts
+.idea
+atlassian-ide-plugin.xml
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath
+target/
+maven-eclipse.xml
+nb-configuration.xml
+.DS_Store
+
+# Sonar Code Checker project properties file
+sonar-project.properties
+.sonar
+
+## PS: you should not gitignore gitignore files.
